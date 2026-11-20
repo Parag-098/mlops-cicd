@@ -23,7 +23,7 @@ python app.py
 python -m pytest -v
 ```
 
-The local test requires accuracy >= 0.80. The failure gate was verified by temporarily changing the threshold to `0.99`; it failed at 0.9667 accuracy, then the `0.80` threshold was restored. The workflow deploy job depends on successful tests, so the failed test prevents deployment.
+The passing test requires accuracy >= 0.80. The GitHub failure gate was verified on `main` by temporarily raising the threshold to `1.01`: Actions run [44774528333](https://github.com/Parag-098/mlops-cicd/actions/runs/44774528333) failed at **Run Unit Tests** and skipped **Deploy Application**. The `0.80` threshold has been restored; the workflow deploy job depends on successful tests.
 
 ## GitHub Actions
 
