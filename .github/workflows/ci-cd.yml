@@ -29,7 +29,7 @@ jobs:
       - name: Run Model
         run: python src/model.py
       - name: Run Unit Tests
-        run: pytest -v
+        run: python -m pytest -v
 
   deploy:
     name: Deploy Application
