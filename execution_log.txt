@@ -1,0 +1,15 @@
+Assignment 7 execution evidence
+Date: 2026-11-20
+Repository: https://github.com/Parag-098/mlops-cicd
+
+Command: python -m compileall -q src app.py
+Result: passed.
+Command: python src/model.py
+Result: Model Accuracy: 0.9667 (Iris Logistic Regression, 80/20 stratified split, random_state=42).
+Command: python -m pytest -v with assertion accuracy >= 0.80
+Result: 1 passed.
+Failure-gate check: temporarily changed the assertion to accuracy >= 0.99.
+Command: python -m pytest -v
+Result: 1 failed as expected: accuracy 0.9666666666666667 is below 0.99. The passing threshold was restored to 0.80.
+
+GitHub Actions is configured on pushes and pull requests targeting main. Deploy is gated by test success and main branch. The repository was empty before implementation. Workflow run IDs and GitHub UI screenshots will be added after the push and Actions execution.
