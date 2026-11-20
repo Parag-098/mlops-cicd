@@ -12,4 +12,8 @@ Failure-gate check: temporarily changed the assertion to accuracy >= 0.99.
 Command: python -m pytest -v
 Result: 1 failed as expected: accuracy 0.9666666666666667 is below 0.99. The passing threshold was restored to 0.80.
 
-GitHub Actions run 44742615576 on the first push completed with the model and build steps passing, but the pytest step exited with code 2; Deploy was skipped. Added an explicit src package and changed the workflow to invoke pytest through `python -m pytest` to make package resolution consistent with the verified local command. A follow-up Actions run is required to confirm the fix.
+GitHub Actions run 44742615576 on the first push completed with the model and build steps passing, but the pytest step exited with code 2; Deploy was skipped. Added an explicit src package and changed the workflow to invoke pytest through `python -m pytest` to make package resolution consistent with the verified local command.
+Follow-up commit: c1fb7b3 (Fix CI pytest module resolution), pushed to main.
+GitHub Actions run 44743235413 completed successfully: Test ML Application=success; Deploy Application=success. Run URL: https://github.com/Parag-098/mlops-cicd/actions/runs/44743235413
+
+GitHub Actions screenshots were not captured; use SCREENSHOT_CHECKLIST.md to capture the live successful run and job logs.

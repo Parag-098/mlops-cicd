@@ -23,10 +23,10 @@ python app.py
 python -m pytest -v
 ```
 
-The local test requires accuracy >= 0.80. To exercise the failure gate, temporarily change the test threshold to `0.99`, run `python -m pytest -v` and confirm failure; restore `0.80` and rerun before committing. The workflow deploy job depends on successful tests, so the failed test prevents deployment.
+The local test requires accuracy >= 0.80. The failure gate was verified by temporarily changing the threshold to `0.99`; it failed at 0.9667 accuracy, then the `0.80` threshold was restored. The workflow deploy job depends on successful tests, so the failed test prevents deployment.
 
 ## GitHub Actions
 
 The workflow file is `.github/workflows/ci-cd.yml`. On pushes to `main`, it checks out the repository, sets up Python 3.11, installs dependencies, compiles the application, runs it and runs pytest. The deploy job then prints a deployment simulation message. Pull requests to `main` run validation but skip deployment.
 
-Verified execution and workflow status are recorded in `execution_log.txt`. GitHub Actions screenshots are listed in `SCREENSHOT_CHECKLIST.md`.
+Verified execution and workflow status are recorded in `execution_log.txt`. The pushed GitHub Actions run passed both jobs. GitHub Actions screenshots are listed in `SCREENSHOT_CHECKLIST.md`.
