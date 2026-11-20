@@ -17,6 +17,6 @@ Follow-up commit: c1fb7b3 (Fix CI pytest module resolution), pushed to main.
 GitHub Actions run 44743235413 completed successfully: Test ML Application=success; Deploy Application=success. Run URL: https://github.com/Parag-098/mlops-cicd/actions/runs/44743235413
 
 Failure scenario: commit 26d5ccc temporarily set the threshold to 1.01 and was pushed to main. GitHub Actions run 44774528333 failed at Run Unit Tests; Deploy Application was skipped. Run: https://github.com/Parag-098/mlops-cicd/actions/runs/44774528333
-The test assertion was restored to 0.80. A passing workflow run for the restored version is expected after pushing this restoration commit.
+The test assertion was restored to 0.80 in commit f8d78fe. GitHub Actions run 44774734799 completed successfully: Test ML Application=success; Deploy Application=success. Run: https://github.com/Parag-098/mlops-cicd/actions/runs/44774734799
 
 GitHub Actions screenshots were not captured; use SCREENSHOT_CHECKLIST.md to capture the live run and job logs.
